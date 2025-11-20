@@ -1,4 +1,6 @@
-# Приготовление чая — Блок-схема Mermaid from Regent1911
+# Задания по Mermaid для студентов
+
+## Приготовление чая — Mermaid from Regent1911
 
 ```mermaid
 graph TD
@@ -10,7 +12,7 @@ graph TD
     F --> G[Конец]
 ```
 
-# Заказ такси — Блок-схема Mermaid from Regent1911
+## Заказ такси — Mermaid from Regent1911
 
 ```mermaid
 sequenceDiagram
@@ -24,7 +26,33 @@ sequenceDiagram
     Сервер->>Водитель: Ищет свободного водителя
     Водитель-->>Сервер: Принимает заказ
     Сервер->>Клиент: Уведомляет о принятии
-    Клиент->>Водитель: Водитель забирает клиента
+    Клиент->>Водитель: Забирает клиента
 ```
 <!--Задание 2.1: Диаграмма классов UML-->
+## Библиотечная система — Mermaid from Regent1911
+
+```mermaid
+classDiagram
+    class Book {
+        -title: string
+        -author: string
+        -ISBN: string
+        -isAvailable: boolean
+    }
+
+    class User {
+        -name: string
+        -userId: string
+        -borrowedBooks: Book[]
+    }
+
+    class Library {
+        -books: Book[]
+        -users: User[]
+    }
+
+    User "*" -- "0..*" Book :.borrowedBooks
+    Library "1" o-- "0..*" Book : содержит
+    Library "1" o-- "0..*" User : управляет
+```
 <!--coming soon-->
