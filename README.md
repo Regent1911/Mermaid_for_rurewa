@@ -51,8 +51,10 @@ classDiagram
         -users: User[]
     }
 
-    User "*" -- "0..*" Book :.borrowedBooks
-    Library "1" o-- "0..*" Book : содержит
-    Library "1" o-- "0..*" User : управляет
+    User "*" --  Book :.borrowedBooks
+    Library "1" o--  Book : содержит
+    Library "1" o--  User : управляет
 ```
+
+## Coming Soon<...>
 <!--coming soon-->
